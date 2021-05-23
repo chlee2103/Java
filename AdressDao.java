@@ -64,8 +64,8 @@ public class AdressDao {
 		
 		Iterator<String> it = map.keySet().iterator();
 		while (it.hasNext()) {
-			String key = it.next(); // key값 얻기
-			AdressDto val = map.get(key);// value값 얻기
+			String key = it.next(); 
+			AdressDto val = map.get(key);
 			key = index+key;
 			index++;
 			if (key.length()== 20 && key.substring(0,1).equals(data)) {
@@ -86,8 +86,8 @@ public class AdressDao {
 		int index = 1;
 		Iterator<String> it = map.keySet().iterator();
 		while (it.hasNext()) {
-			String key = it.next(); // key값 얻기
-			AdressDto val = map.get(key);// value값 얻기
+			String key = it.next(); 
+			AdressDto val = map.get(key);
 			key = index+key;
 			index++;
 			if (key.length()== 20 && key.substring(0,1).equals(data)) {
@@ -109,8 +109,8 @@ public class AdressDao {
 		
 		Iterator<String> it = map.keySet().iterator();
 		while (it.hasNext()) {
-			String key = it.next(); // key값 얻기
-			AdressDto val = map.get(key);// value값 얻기
+			String key = it.next(); 
+			AdressDto val = map.get(key);
 			key = index+key;
 			index++;
 			if (key.length()== 20 && key.substring(0,1).equals(data)) {
@@ -119,7 +119,7 @@ public class AdressDao {
 			}
 		}
 	}
-	// 수정 : 번호, 주소, 그룹, 메모 (아직..)
+	// 수정 : 번호, 주소, 그룹, 메모 
 	void update() {
 		while(true) {
 			p("수정 (1.번호, 2.그룹, 3.주소, 4.메모) 중 선택 > ");
@@ -151,8 +151,8 @@ public class AdressDao {
 		int index = 1;
 		Iterator<String> it = map.keySet().iterator();
 		while (it.hasNext()) {
-			String key = it.next(); // key값 얻기
-			AdressDto val = map.get(key);// value값 얻기
+			String key = it.next();
+			AdressDto val = map.get(key);
 			key = index+key;
 			index++;
 			if (key.length()== 20 && key.substring(0,1).equals(data)) {
@@ -173,7 +173,7 @@ public class AdressDao {
 		int index = 1;
 		Iterator<String> it = map.keySet().iterator();
 		while (it.hasNext()) {
-			String key = it.next(); // key값 얻기
+			String key = it.next(); 
 			key = index+key;
 			index++;
 			if (key.length()== 20 && key.substring(0,1).equals(data)) {
@@ -209,8 +209,8 @@ public class AdressDao {
 		p("이름검색 > "); String name = sc.next();
 		Iterator<String> it = map.keySet().iterator();
 		while (it.hasNext()) {
-			String key = it.next(); // key값 얻기
-			AdressDto val = map.get(key);// value값 얻기
+			String key = it.next();
+			AdressDto val = map.get(key);
 			if (val.getName().contains(name)) {
 				plna(val);
 				flag = true;
@@ -222,8 +222,8 @@ public class AdressDao {
 		p("번호검색 > "); String number = sc.next();
 		Iterator<String> it = map.keySet().iterator();
 		while (it.hasNext()) {
-			String key = it.next(); // key값 얻기
-			AdressDto val = map.get(key);// value값 얻기
+			String key = it.next(); 
+			AdressDto val = map.get(key);
 			if (val.getNumber().contains(number)) {
 				plna(val);
 				flag = true;
@@ -235,8 +235,8 @@ public class AdressDao {
 		p("그룹검색 > "); String group = sc.next();
 		Iterator<String> it = map.keySet().iterator();
 		while (it.hasNext()) {
-			String key = it.next(); // key값 얻기
-			AdressDto val = map.get(key);// value값 얻기
+			String key = it.next(); 
+			AdressDto val = map.get(key);
 			if (val.getGroup().contains(group)) {
 				plna(val);
 				flag = true;
@@ -248,8 +248,8 @@ public class AdressDao {
 		p("주소검색 > "); String adress = sc.next();
 		Iterator<String> it = map.keySet().iterator();
 		while (it.hasNext()) {
-			String key = it.next(); // key값 얻기
-			AdressDto val = map.get(key);// value값 얻기
+			String key = it.next(); 
+			AdressDto val = map.get(key);
 			if (val.getAdress().contains(adress)) {
 				plna(val);
 				flag = true;
@@ -261,8 +261,8 @@ public class AdressDao {
 		p("주소검색 > "); String memo = sc.next();
 		Iterator<String> it = map.keySet().iterator();
 		while (it.hasNext()) {
-			String key = it.next(); // key값 얻기
-			AdressDto val = map.get(key);// value값 얻기
+			String key = it.next(); 
+			AdressDto val = map.get(key);
 			if (val.getMemo().contains(memo)) {
 				plna(val);
 				flag = true;
@@ -287,8 +287,8 @@ public class AdressDao {
 		int index = 1;
 		Iterator<String> it = map.keySet().iterator();
 		while (it.hasNext()) {
-			String key = it.next(); // key값 얻기
-			AdressDto val = map.get(key);// value값 얻기
+			String key = it.next(); 
+			AdressDto val = map.get(key);
 			if (val.getName().contains(name)) {
 				pln(index + " 데이터 > " + val);
 				flag = true;
@@ -296,7 +296,6 @@ public class AdressDao {
 			}
 		}
 	}
-	
 	
 	String key() {  // 중복방지를 위해 날짜,시간으로 설정
 		SimpleDateFormat format = new SimpleDateFormat ("yyyy-MM-dd-HH-mm-ss");
@@ -319,17 +318,4 @@ public class AdressDao {
 	void plna(AdressDto str) {
 		System.out.println(str);
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 }
